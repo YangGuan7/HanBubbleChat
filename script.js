@@ -9,11 +9,16 @@ fetch('./chat.js')
     Object.keys(data["2024Dec"]).forEach(dateKey => {
       const dateConversations = data["2024Dec"][dateKey];
       
-      // 顯示日期標題
+      // 顯示日期和星期
       const headerDiv = document.createElement('div');
       headerDiv.className = 'chatHeader';
       const headerSpan = document.createElement('span');
-      headerSpan.textContent = `2024年12月${dateKey.slice(3, 5)}日`;
+
+      // 計算星期
+      const dateObj = new Date(dateKey);
+      const dayOfWeek = dateObj.toLocaleString('zh-TW', { weekday: 'long' }); // 取得星期的中文名稱
+
+      headerSpan.textContent = `2024年12月${dateKey.slice(3, 5)}日 ${dayOfWeek}`;
       headerDiv.appendChild(headerSpan);
       chatContainer.appendChild(headerDiv);
 
