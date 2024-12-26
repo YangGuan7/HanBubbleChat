@@ -3,7 +3,16 @@ fetch('./chat.js')
     .then(conversations => {
         const chatContainer = document.getElementById('chat-container');
 
-        conversations["241225"].forEach(conversation => {
+        // 顯示 241225 的標題
+        const headerDiv = document.createElement('div');
+        headerDiv.className = 'chatHeader';
+        const headerSpan = document.createElement('span');
+        headerSpan.textContent = '2024年12月25日 星期三';
+        headerDiv.appendChild(headerSpan);
+        chatContainer.appendChild(headerDiv);
+   
+        // 顯示留言列表
+        conversations["241225"].forEach((conversation, index) => {
             const { time, kr, tr } = conversation;
 
             // 創建外層容器
@@ -65,5 +74,7 @@ fetch('./chat.js')
             // 插入到聊天容器中
             chatContainer.appendChild(chatListDiv);
         });
+
+        
     })
     .catch(error => console.error('Error loading chat data:', error));

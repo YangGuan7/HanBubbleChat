@@ -11,6 +11,14 @@ body {
   gap: 15px;
   padding-right: 25px;
 }
+.chatHeader{
+    margin: 0 auto;
+    color: #767676;
+    border-top: 1px solid #D5D5D5;
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+}
 img {
   width: 40px;
   height: 40px;
