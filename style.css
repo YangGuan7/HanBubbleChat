@@ -45,11 +45,14 @@ header{
 
     text-align: center;
 }
-img {
+.avatarImg {
   width: 40px;
   height: 40px;
   border-radius: 50px;
   margin-top: 5px;
+}
+.chatImg{
+  width: 200px;
 }
 .chatList {
   display: flex;
