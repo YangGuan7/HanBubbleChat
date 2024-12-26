@@ -1,4 +1,3 @@
-// script.js
 fetch('./chat.js')
     .then(response => response.json())
     .then(conversations => {
@@ -11,6 +10,17 @@ fetch('./chat.js')
             // 創建外層容器
             const messageDiv = document.createElement('div');
             messageDiv.className = 'message';
+
+            // 添加大頭貼
+            const avatarImg = document.createElement('img');
+            avatarImg.src = './img/avatar.jpg'; // 替換為你的大頭貼路徑
+            avatarImg.alt = 'Avatar';
+            avatarImg.style.width = '40px';
+            avatarImg.style.height = '40px';
+            avatarImg.style.borderRadius = '50%';
+            avatarImg.style.marginRight = '10px';
+            avatarImg.style.verticalAlign = 'middle';
+            messageDiv.appendChild(avatarImg);
 
             // 添加韓文對話
             const krSpan = document.createElement('span');
