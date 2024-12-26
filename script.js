@@ -24,6 +24,7 @@ fetch('./chat.js')
             const nameWrapper = document.createElement('div');
             const nameSpan = document.createElement('span');
             nameSpan.textContent = '한건강'; // 固定名稱
+            nameSpan.className = 'name';
             nameWrapper.appendChild(nameSpan);
 
             // 創建聊天內容區域
