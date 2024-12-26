@@ -4,12 +4,36 @@ body {
   background-color: #eeeeee;
   font-family: "Noto Sans TC", serif;
   font-size: 15px;
+  margin: 0;
+  padding: 0;
+  margin-top:80px;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: white;
+    border-end-start-radius:15px;
+    border-end-end-radius:15px;
+
+}
+.tittle{
+    font-size: 20px;
+    font-weight: bold;
 }
 .chat-container {
   display: flex;
   flex-direction: column;
   gap: 15px;
   padding-right: 25px;
+  margin: 8px;
+
 }
 .chatHeader{
     margin: 0 auto;
