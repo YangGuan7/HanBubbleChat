@@ -24,7 +24,7 @@ fetch('./chat.js')
 
       // 顯示當天的聊天紀錄
       dateConversations.forEach((conversation) => {
-        const { time, kr, tr, img } = conversation;
+        const { time, kr, tr, img, vidsos } = conversation;
 
         // 創建聊天顯示結構
         const chatListDiv = document.createElement('div');
@@ -61,6 +61,20 @@ fetch('./chat.js')
           krSpan.className = 'kr';
           krSpan.textContent = kr;
           chatTextDiv.appendChild(krSpan);
+        }
+
+        // 如果有影片，顯示影片
+        if (vidsos) {
+          const videoElement = document.createElement('video');
+          videoElement.width = 200;
+          videoElement.controls = true;
+
+          const sourceElement = document.createElement('source');
+          sourceElement.src = vidsos;
+          sourceElement.type = 'video/mp4';
+
+          videoElement.appendChild(sourceElement);
+          chatTextDiv.appendChild(videoElement);
         }
 
         const hr = document.createElement('div');
