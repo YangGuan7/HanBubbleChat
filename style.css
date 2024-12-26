@@ -31,7 +31,7 @@ header{
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding-right: 25px;
+  
   margin: 8px;
 
 }
@@ -54,6 +54,7 @@ img {
 .chatList {
   display: flex;
   gap: 10px;
+  padding-right: 25px;
 }
 .chatText {
   background-color: white;
